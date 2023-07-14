@@ -1,0 +1,240 @@
+[
+  {
+    "profileId": 5,
+    "activity": {
+      "activityId": 1,
+      "activityName": "football",
+      "added": "2002-09-18T00:00:00.000+0000"
+    },
+    "happiness": {
+      "happinessId": 2,
+      "description": "Very good",
+      "fromValue": 85,
+      "toValue": 94
+    },
+    "month": "JANUARY",
+    "year": 2019,
+    "rating": 86
+  },
+  {
+    "profileId": 27,
+    "activity": {
+      "activityId": 3,
+      "activityName": "food",
+      "added": "2019-07-30T00:00:00.000+0000"
+    },
+    "happiness": {
+      "happinessId": 3,
+      "description": "Good",
+      "fromValue": 75,
+      "toValue": 84
+    },
+    "month": "JANUARY",
+    "year": 2019,
+    "rating": 80
+  },
+  {
+    "profileId": 6,
+    "activity": {
+      "activityId": 1,
+      "activityName": "football",
+      "added": "2002-09-18T00:00:00.000+0000"
+    },
+    "happiness": {
+      "happinessId": 2,
+      "description": "Very good",
+      "fromValue": 85,
+      "toValue": 94
+    },
+    "month": "FEBRUARY",
+    "year": 2019,
+    "rating": 87
+  },
+  {
+    "profileId": 7,
+    "activity": {
+      "activityId": 1,
+      "activityName": "football",
+      "added": "2002-09-18T00:00:00.000+0000"
+    },
+    "happiness": {
+      "happinessId": 2,
+      "description": "Very good",
+      "fromValue": 85,
+      "toValue": 94
+    },
+    "month": "MARCH",
+    "year": 2019,
+    "rating": 88
+  },
+  {
+    "profileId": 8,
+    "activity": {
+      "activityId": 1,
+      "activityName": "football",
+      "added": "2002-09-18T00:00:00.000+0000"
+    },
+    "happiness": {
+      "happinessId": 1,
+      "description": "Superb",
+      "fromValue": 95,
+      "toValue": 100
+    },
+    "month": "APRIL",
+    "year": 2019,
+    "rating": 96
+  },
+  {
+    "profileId": 1,
+    "activity": {
+      "activityId": 1,
+      "activityName": "football",
+      "added": "2002-09-18T00:00:00.000+0000"
+    },
+    "happiness": {
+      "happinessId": 1,
+      "description": "Superb",
+      "fromValue": 95,
+      "toValue": 100
+    },
+    "month": "MAY",
+    "year": 2019,
+    "rating": 95
+  },
+  {
+    "profileId": 2,
+    "activity": {
+      "activityId": 1,
+      "activityName": "football",
+      "added": "2002-09-18T00:00:00.000+0000"
+    },
+    "happiness": {
+      "happinessId": 2,
+      "description": "Very good",
+      "fromValue": 85,
+      "toValue": 94
+    },
+    "month": "JUNE",
+    "year": 2019,
+    "rating": 87
+  },
+  {
+    "profileId": 9,
+    "activity": {
+      "activityId": 1,
+      "activityName": "football",
+      "added": "2002-09-18T00:00:00.000+0000"
+    },
+    "happiness": {
+      "happinessId": 3,
+      "description": "Good",
+      "fromValue": 75,
+      "toValue": 84
+    },
+    "month": "JULY",
+    "year": 2019,
+    "rating": 75
+  },
+  {
+    "profileId": 10,
+    "activity": {
+      "activityId": 1,
+      "activityName": "football",
+      "added": "2002-09-18T00:00:00.000+0000"
+    },
+    "happiness": {
+      "happinessId": 4,
+      "description": "Fairly Good",
+      "fromValue": 65,
+      "toValue": 74
+    },
+    "month": "AUGUST",
+    "year": 2019,
+    "rating": 74
+  },
+  {
+    "profileId": 28,
+    "activity": {
+      "activityId": 12,
+      "activityName": "Sotiris",
+      "added": "1997-05-08T00:00:00.000+0000"
+    },
+    "happiness": {
+      "happinessId": 1,
+      "description": "Superb",
+      "fromValue": 95,
+      "toValue": 100
+    },
+    "month": "AUGUST",
+    "year": 2019,
+    "rating": 96
+  },
+  {
+    "profileId": 23,
+    "activity": {
+      "activityId": 1,
+      "activityName": "football",
+      "added": "2002-09-18T00:00:00.000+0000"
+    },
+    "happiness": {
+      "happinessId": 3,
+      "description": "Good",
+      "fromValue": 75,
+      "toValue": 84
+    },
+    "month": "SEPTEMBER",
+    "year": 2019,
+    "rating": 80
+  },
+  {
+    "profileId": 24,
+    "activity": {
+      "activityId": 1,
+      "activityName": "football",
+      "added": "2002-09-18T00:00:00.000+0000"
+    },
+    "happiness": {
+      "happinessId": 3,
+      "description": "Good",
+      "fromValue": 75,
+      "toValue": 84
+    },
+    "month": "OCTOBER",
+    "year": 2019,
+    "rating": 80
+  },
+  {
+    "profileId": 25,
+    "activity": {
+      "activityId": 1,
+      "activityName": "football",
+      "added": "2002-09-18T00:00:00.000+0000"
+    },
+    "happiness": {
+      "happinessId": 3,
+      "description": "Good",
+      "fromValue": 75,
+      "toValue": 84
+    },
+    "month": "NOVEMBER",
+    "year": 2019,
+    "rating": 80
+  },
+  {
+    "profileId": 26,
+    "activity": {
+      "activityId": 1,
+      "activityName": "football",
+      "added": "2002-09-18T00:00:00.000+0000"
+    },
+    "happiness": {
+      "happinessId": 3,
+      "description": "Good",
+      "fromValue": 75,
+      "toValue": 84
+    },
+    "month": "DECEMBER",
+    "year": 2019,
+    "rating": 80
+  }
+]

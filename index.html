@@ -1,0 +1,451 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link
+	href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.0/css/bootstrap.min.css"
+	rel="stylesheet" id="bootstrap-css">
+<link href="css/style.css" rel="stylesheet">
+<script src="https://code.jquery.com/jquery-3.2.1.js"
+	integrity="sha256-DZAnKJ/6XZ9si04Hgrsxu/8s717jcIzLy3oi35EouyE="
+	crossorigin="anonymous"></script>
+<script
+	src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+<!-- for button image delete profile -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+
+<!-- For modal -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+
+<title>My Profile</title>
+</head>
+
+<body>
+
+
+	<hr>
+	<div class="container bootstrap snippet">
+		<div class="row">
+			<div class="col-sm-10">
+				<h1 id="username">User name</h1>
+			</div>
+			<div class="col-sm-2" id="divImageProfile">
+				<a href="#" class="pull-right" id="imageProfile"><img
+					title="click here to change your photo"
+					class="img-circle img-responsive" id="img-profile"
+					src="http://www.gravatar.com/avatar/28fd20ccec6865e2d5f0e1f4446eb7bf?s=100"></a>
+				<form action="saveUserPhoto" method="POST" id="new_picture"
+					enctype="multipart/form-data">
+					<input type="file" name="photo" id="file" /> <label for="file"
+						class="btn-1">upload</label> <br>
+					<button class=" btn-lg btn-success" type="submit">
+						<i class="glyphicon glyphicon-ok-sign"></i> Save
+					</button>
+				</form>
+			</div>
+		</div>
+		<div class="row">
+			<div class="col-sm-3">
+				<!--left col-->
+
+				<ul class="list-group">
+					<li class="list-group-item text-right"><span
+						class="pull-left">Profile</span> <button class=" btn-danger" type="button"
+						data-toggle="modal"
+						data-target="#myModal"
+						title="Delete My Profile"
+						data-original-title="profile" ><i class="fa fa-remove"></i></button></li>
+					<li class="list-group-item text-right" id="doc"><span
+						class="pull-left"><strong>Joined</strong></span> 2.13.2014</li>
+					<li class="list-group-item text-right" id="lastLogin"><span
+						class="pull-left"><strong>Last seen</strong></span> Yesterday</li>
+					<li class="list-group-item text-right" id="fullname"><span
+						class="pull-left"><strong>Real name</strong></span> Joseph Doe</li>
+					<li class="list-group-item text-right" id="email"><span
+						class="pull-left"><strong>Email</strong></span> ---@gmail.com</li>
+					<li class="list-group-item text-right" id="age"><span
+						class="pull-left"><strong>Age</strong></span> 70</li>
+
+				</ul>
+
+				<br> <br>
+
+				<ul class="list-group">
+					<li class="list-group-item text-muted">Happiness <i
+						class="fa fa-dashboard fa-1x"></i></li>
+					<li class="list-group-item text-right" id = "avgPrev"><span class="pull-left"><strong
+							>General 2018</strong></span> 55%</li>
+					<li class="list-group-item text-right" id = avgCurr><span class="pull-left"><strong
+							>General 2019</strong></span> 85%</li>
+					<!-- <li class="list-group-item text-right"><span class="pull-left"><strong>Posts</strong></span> 37</li>
+                    <li class="list-group-item text-right"><span class="pull-left"><strong>Followers</strong></span> 78
+                    </li> -->
+				</ul>
+
+				<br> <br>
+
+				<div class="panel panel-default">
+					<div class="panel-heading">
+						Other <i class="fa fa-link fa-1x"></i>
+					</div>
+					<!-- <div class="panel-body list-group-item"><a href="http://songcontests-app.com">songcontests-app.com</a></div> -->
+					<ul class="nav nav-tabs" id="myTab">
+						<li class="active" id="home"><a href="#home"
+							data-toggle="tab">Home</a></li>
+						<li id="tasks"><a href="#tasks" data-toggle="tab">Tasks</a></li>
+						<li id="settings"><a href="#settings" data-toggle="tab">Settings</a></li>
+					</ul>
+
+				</div>
+
+
+				<!--<div class="panel panel-default">
+                    <div class="panel-heading">Social Media</div>
+                    <div class="panel-body">
+                        <i class="fa fa-facebook fa-2x"></i> <i class="fa fa-github fa-2x"></i> <i
+                            class="fa fa-twitter fa-2x"></i> <i class="fa fa-pinterest fa-2x"></i> <i
+                            class="fa fa-google-plus fa-2x"></i>
+                    </div>
+                </div>-->
+
+			</div>
+			<!--/col-3-->
+			<div class="col-sm-9">
+
+				<ul class="nav nav-tabs" id="myActivitiesTabs">
+					<li id="general"><a href="#gen"
+						data-toggle="tab">General 2019</a></li>
+				</ul>
+
+				<div class="tab-content">
+					<div class="tab-pane active" id="homeInfo">
+						<div class="table-responsive">
+							<table class="table table-hover">
+								<thead>
+									<tr>
+										<th id="addActivity">#</th>
+										<th>Activities / Relationships</th>
+										<th>Happiness</th>
+										<th>Rating</th>
+										<th>Added</th>
+										<!-- <th>Label </th>
+                                        <th>Label </th>
+                                        <th>Label </th> -->
+									</tr>
+								</thead>
+								<tbody id="items">
+									<tr>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+										<td></td>
+									</tr>
+								</tbody>
+							</table>
+							<hr>
+							<div class="row">
+								<div class="col-md-4 col-md-offset-4 text-center">
+									<ul class="pagination" id="myPager"></ul>
+								</div>
+							</div>
+						</div>
+						<!--/table-resp-->
+
+						<hr>
+
+					</div>
+					<!--/tab-pane-->
+					<div class="tab-pane" id="tasksInfo">
+
+						<h2></h2>
+
+						<!-- <ul class="list-group">
+							<li class="list-group-item text-muted">Inbox</li>
+							<li class="list-group-item text-right"><a href="#"
+								class="pull-left">Here is your a link to the latest summary
+									report from the..</a> 2.13.2014</li>
+							<li class="list-group-item text-right"><a href="#"
+								class="pull-left">Hi Joe, There has been a request on your
+									account since that was..</a> 2.11.2014</li>
+							<li class="list-group-item text-right"><a href="#"
+								class="pull-left">Nullam sapien massaortor. A lobortis
+									vitae, condimentum justo...</a> 2.11.2014</li>
+							<li class="list-group-item text-right"><a href="#"
+								class="pull-left">Thllam sapien massaortor. A lobortis
+									vitae, condimentum justo...</a> 2.11.2014</li>
+							<li class="list-group-item text-right"><a href="#"
+								class="pull-left">Wesm sapien massaortor. A lobortis vitae,
+									condimentum justo...</a> 2.11.2014</li>
+							<li class="list-group-item text-right"><a href="#"
+								class="pull-left">For therepien massaortor. A lobortis
+									vitae, condimentum justo...</a> 2.11.2014</li>
+							<li class="list-group-item text-right"><a href="#"
+								class="pull-left">Also we, havesapien massaortor. A lobortis
+									vitae, condimentum justo...</a> 2.11.2014</li>
+							<li class="list-group-item text-right"><a href="#"
+								class="pull-left">Swedish chef is assaortor. A lobortis
+									vitae, condimentum justo...</a> 2.11.2014</li>
+
+						</ul> -->
+
+						
+							<div id="main" class="card">
+							  <div class="card-content">
+								<span class="card-title">Task List</span>
+								<div class="row">
+								  <form id="task-form">
+									<div class="input-field col s12">
+									  <input type="text" name="taskName" id="task" value="Walk the dog">
+									  <label for="task">New Task</label>
+									  <p style="color: red" id="validInput"></p>
+									</div>
+								</div>
+								<input type="submit" value="Add Task" class="btn">
+								</form>
+							  </div>
+							  <div class="card-action">
+								<h5 id="task-title">Tasks</h5>
+								<div class="input-field col s12">
+								  <input type="text" name="filter" id="filter">
+								  <label for="filter">Filter Tasks</label>
+								</div>
+								<ul class="collection">
+								  
+								</ul>
+								<a class="clear-tasks btn black" href="">Clear Tasks</a>
+							  </div>
+							</div>
+						  
+
+					</div>
+					<!--/tab-pane-->
+
+					<div class="tab-pane" id="settingsInfo">
+
+
+						<hr>
+
+						<form class="form" action="happy/user" method="POST"
+							id="registrationForm" enctype="multipart/form-data">
+
+
+
+							<div class="form-group">
+
+								<div class="col-xs-6">
+									<label for="first_name">
+										<h4>First name</h4>
+									</label> <input type="text" class="form-control" name="firstName"
+										id="first_name" placeholder="first name"
+										title="enter your first name ." required="true">
+								</div>
+							</div>
+							<div class="form-group">
+
+								<div class="col-xs-6">
+									<label for="last_name">
+										<h4>Last name</h4>
+									</label> <input type="text" class="form-control" name="lastName"
+										id="last_name" placeholder="last name"
+										title="enter your last name ." required="true">
+								</div>
+							</div>
+
+
+							<div class="form-group">
+
+								<div class="col-xs-6">
+									<label for="text">
+										<h4>Username</h4>
+									</label> <input type="text" class="form-control" name="username"
+										id="usernameSettings" placeholder="username"
+										title="enter username" required="true">
+								</div>
+							</div>
+
+							<div class="form-group">
+
+								<div class="col-xs-6">
+									<label for="email">
+										<h4>Email</h4>
+									</label> <input type="email" class="form-control" name="email"
+										id="emailSettings" placeholder="you@email.com"
+										title="enter your email." required="true">
+								</div>
+							</div>
+
+							<div class="form-group">
+
+								<div class="col-xs-6">
+									<label for="password">
+										<h4>Password</h4>
+									</label> <input type="password" class="form-control" name="password"
+										id="password" placeholder="password"
+										title="enter your password." required="true">
+								</div>
+							</div>
+
+							<div class="form-group">
+
+								<div class="col-xs-6">
+									<label for="password2">
+										<h4>Verify Password</h4>
+									</label> <input type="password" class="form-control" name="password2"
+										id="password2" placeholder="password2"
+										title="enter your password2." required="true">
+									<p style="color: red" id="diffPassw"></p>
+								</div>
+							</div>
+
+							<div class="form-group">
+
+								<div>
+
+									<input type="hidden" class="form-control"
+										name="registrationDate" id="docSettings">
+								</div>
+							</div>
+
+							<div class="form-group">
+
+								<div>
+
+									<input type="hidden" class="form-control" name="userId"
+										id="idSettings">
+								</div>
+							</div>
+
+							<div class="form-group">
+
+								<div class="col-xs-12" id="settingsButtons">
+									<br>
+									<button class=" btn-lg btn-success" type="submit">
+										<i class="glyphicon glyphicon-ok-sign"></i> Save
+									</button>
+									<button class=" btn-lg" type="reset"
+										onclick="getInitializedFields()">
+										<i class="glyphicon glyphicon-repeat"></i> Reset
+									</button>
+								</div>
+								<div id="loading"
+									style="align-content: center; text-align: center; margin: auto">
+									<img src="loading.gif" alt="">
+								</div>
+							</div>
+						</form>
+
+					</div>
+
+				</div>
+				<!--/tab-pane-->
+			</div>
+			<!--/tab-content-->
+
+		</div>
+		<!--/col-9-->
+	</div>
+	<!--/row-->
+
+		<!-- Modal -->
+<div id="myModal" class="modal fade" role="dialog">
+		<div class="modal-dialog">
+
+		  <!-- Modal content-->
+		  <div class="modal-content">
+			<div class="modal-header">
+			  <button type="button" class="close" data-dismiss="modal">&times;</button>
+			  <h4 class="modal-title">Delete my Profile</h4>
+			</div>
+			<div class="modal-body">
+			  <p>Be Careful! Do you really want to delete your Profile?</p>
+			</div>
+			<div class="modal-footer">
+				<button type="button" class="btn btn-danger" id="deleteProfile" >Delete My Profile</button>
+				  <button type="button" class="btn btn-info" data-dismiss="modal">Close</button>
+			</div>
+		  </div>
+	  
+		</div>
+</div>
+
+<!-- The Modal -->
+<div id="tablePrevYearModal" class="modal">
+
+	<!-- Modal content -->
+	<div class="modal-content">
+	  <span id="closePrevModal" class="close">&times;</span>
+	  <p style="text-align: center">Happiness of previous year</p>
+	</div>
+	<table class="table table-hover">
+		<thead>
+			<tr>
+				<th>#</th>
+				<th>Activities / Relationships</th>
+				<th>Happiness</th>
+				<th>Rating</th>
+				<th>Added</th>
+			
+			</tr>
+		</thead>
+		<tbody id="prevProfiles">
+			<tr>
+				<td>1</td>
+				<td>Table cell</td>
+				<td>Table cell</td>
+				<td>Table cell</td>
+				<td>Table cell</td>
+			</tr>
+			<tr>
+				<td>2</td>
+				<td>Table cell</td>
+				<td>Table cell</td>
+				<td>Table cell</td>
+				<td>Table cell</td>
+			</tr>
+			<tr>
+				<td>3</td>
+				<td>Table cell</td>
+				<td>Table cell</td>
+				<td>Table cell</td>
+				<td>Table cell</td>
+			</tr>
+
+		</tbody>
+	</table>
+</div>
+
+<!-- The Modal -->
+<div id="addActivityModal" class="modal">
+
+	<!-- Modal content -->
+	<div class="modal-content">
+	  <span id="closeActivityModal" class="close">&times;</span>
+	  <p style="text-align: center">Add Activity/Relationship</p>
+	</div>
+	
+
+</div>
+
+	<script src="js/helper.js"></script>
+	<script src="js/ajaxCalls.js"></script>
+	<script src="js/home.js"></script>
+	<script src="js/tasks.js"></script>
+	<script src="js/retrieveTasks.js"></script>
+	<script src="js/tasks_operations.js"></script>
+	<script src="js/profile.js"></script>
+	<script src="js/settings.js"></script>
+
+
+
+</body>
+
+</html>

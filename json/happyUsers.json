@@ -1,0 +1,22 @@
+
+  {
+    "userId": 1,
+    "username": "andreas",
+    "password": "areianara",
+    "email": "andreas-patsim@hotmail.com",
+    "dateOfBirth": "1993-02-16",
+    "registrationDate": "2019-07-29",
+    "picture": null,
+    "firstName": "Andreas",
+    "lastName": "Patsimas",
+    "roles": [
+      {
+        "roleId": 1,
+        "name": "admin"
+      },
+      {
+        "roleId": 2,
+        "name": "user"
+      }
+    ]
+  }
